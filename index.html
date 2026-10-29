@@ -14,20 +14,15 @@
   <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/hero.jpg" imagesrcset="assets/hero-1280.jpg 1280w, assets/hero.jpg 2560w">
   <style>
     :root {
       --text: #f9f9f9;
-      --overlay: rgba(0, 0, 0, 0.38);
-      --gutter: max(24px, calc((100vw - 1140px) / 2));
+      --overlay: rgba(0, 0, 0, 0.3);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
-      font-family: "Alice", Georgia, "Times New Roman", serif;
+      font-family: Georgia, "Times New Roman", serif;
       color: var(--text);
       background: #1c1c1c;
     }
@@ -39,8 +34,8 @@
       min-height: 100svh;
       display: flex;
       align-items: center;
-      padding: 56px var(--gutter);
-      background: #1c1c1c url("assets/hero-1280.jpg") center / cover no-repeat;
+      padding: 56px 5.5vw;
+      background: #1c1c1c url("assets/hero-1280.jpg") left center / cover no-repeat;
     }
     @media (min-width: 1281px), (min-resolution: 1.5dppx) {
       .hero { background-image: url("assets/hero.jpg"); }
@@ -56,11 +51,11 @@
     .brand {
       position: absolute;
       top: 8px;
-      left: 20px;
+      left: 28px;
       z-index: 2;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       color: var(--text);
       text-decoration: none;
       font-size: 20px;
@@ -71,9 +66,14 @@
     h1 {
       position: relative;
       z-index: 1;
-      font-size: clamp(30px, 3.55vw, 45px);
+      width: 50vw;
+      text-align: center;
+      font-size: 45px;
       font-weight: 700;
       line-height: 1.38;
+    }
+    @media (max-width: 600px) {
+      h1 { width: 100%; font-size: 36px; }
     }
   </style>
 </head>
