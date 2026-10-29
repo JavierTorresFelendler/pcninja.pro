@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PcNinja</title>
+  <meta name="description" content="Under construction...">
+  <!-- Same as the current Google Site: hidden from search engines until the real site is ready -->
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="PcNinja">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.pcninja.pro/">
+  <meta property="og:description" content="Under construction...">
+  <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero.jpg" imagesrcset="assets/hero-1280.jpg 1280w, assets/hero.jpg 2560w">
+  <style>
+    :root {
+      --text: #f9f9f9;
+      --overlay: rgba(0, 0, 0, 0.38);
+      --gutter: max(24px, calc((100vw - 1140px) / 2));
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Alice", Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: #1c1c1c;
+    }
+
+    /* Full-screen hero photo with a dark overlay, like the Google Sites banner */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding: 56px var(--gutter);
+      background: #1c1c1c url("assets/hero-1280.jpg") center / cover no-repeat;
+    }
+    @media (min-width: 1281px), (min-resolution: 1.5dppx) {
+      .hero { background-image: url("assets/hero.jpg"); }
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay);
+    }
+
+    /* Top-left brand: logo + site name */
+    .brand {
+      position: absolute;
+      top: 8px;
+      left: 20px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 40px;
+    }
+    .brand img { width: 40px; height: 40px; display: block; }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(30px, 3.55vw, 45px);
+      font-weight: 700;
+      line-height: 1.38;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <img src="assets/logo.png" alt="PcNinja logo" width="40" height="40">
+      <span>PcNinja</span>
+    </a>
+  </header>
+  <main class="hero">
+    <h1>Under construction...</h1>
+  </main>
+</body>
+</html>
