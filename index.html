@@ -3,89 +3,317 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PcNinja</title>
-  <meta name="description" content="Under construction...">
-  <!-- Same as the current Google Site: hidden from search engines until the real site is ready -->
-  <meta name="robots" content="noindex">
-  <meta property="og:title" content="PcNinja">
+  <title>PcNinja - Javier Torres</title>
+  <meta name="description" content="Javier Torres (PcNinja): sysadmin and builder of free Windows tools - upgrade, update and Office installers, remote support and clean Windows ISOs.">
+  <link rel="canonical" href="https://www.pcninja.pro/">
+  <meta property="og:title" content="PcNinja - Javier Torres">
+  <meta property="og:description" content="SysAdmin by day, automation builder by night. Free Windows tools, remote support and clean Windows ISOs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.pcninja.pro/">
-  <meta property="og:description" content="Under construction...">
   <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <meta name="theme-color" content="#012456">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    /* PowerShell console blue is the page's signature; everything else stays quiet. */
     :root {
-      --text: #f9f9f9;
-      --overlay: rgba(0, 0, 0, 0.3);
+      --console: #012456;      /* classic PowerShell window */
+      --console-ink: #eeedf0;  /* PowerShell console text */
+      --command: #f2e28b;      /* command echo, used only inside the console */
+      --ninja: #2f8cff;        /* headband blue from the logo */
+      --paper: #f4f6f9;
+      --ink: #13202f;
+      --muted: #536173;
+      --rule: #d8dee6;
+      --ui: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      --mono: "Cascadia Code", "Cascadia Mono", Consolas, "SFMono-Regular", Menlo, monospace;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--text);
-      background: #1c1c1c;
-    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ui); color: var(--ink); background: var(--paper); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--ninja); outline-offset: 3px; border-radius: 3px; }
+    .wrap { width: min(1080px, 100% - 48px); margin-inline: auto; }
 
-    /* Full-screen hero photo with a dark overlay, like the Google Sites banner */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      padding: 56px 5.5vw;
-      background: #1c1c1c url("assets/hero-1280.jpg") left center / cover no-repeat;
-    }
-    @media (min-width: 1281px), (min-resolution: 1.5dppx) {
-      .hero { background-image: url("assets/hero.jpg"); }
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: var(--overlay);
-    }
+    /* ---------- Console hero ---------- */
+    .console { background: var(--console); color: var(--console-ink); }
+    .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 600; font-size: 18px; }
+    .brand img { width: 40px; height: 40px; }
+    .bar nav { display: flex; gap: 6px; }
+    .bar nav a { text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 15px; color: #c9d4e6; }
+    .bar nav a:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
 
-    /* Top-left brand: logo + site name */
-    .brand {
-      position: absolute;
-      top: 8px;
-      left: 28px;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 20px;
-      line-height: 40px;
-    }
-    .brand img { width: 40px; height: 40px; display: block; }
-
-    h1 {
-      position: relative;
-      z-index: 1;
-      width: 50vw;
-      text-align: center;
-      font-size: 45px;
+    .hero { padding: 72px 0 88px; position: relative; }
+    .mascot { position: absolute; right: 0; bottom: 64px; width: min(28vw, 330px); height: auto; pointer-events: none; }
+    .hero .copy { position: relative; z-index: 1; padding-right: min(29vw, 340px); }
+    .prompt { font-family: var(--mono); font-size: 17px; color: #9fb3d1; }
+    .prompt .cmd { color: var(--command); }
+    .cursor { display: inline-block; width: 0.6em; height: 1.1em; vertical-align: -0.18em; background: var(--console-ink); animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero h1 {
+      margin: 22px 0 18px;
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 1.02;
       font-weight: 700;
-      line-height: 1.38;
+      letter-spacing: -0.02em;
+      color: #fff;
+      max-width: 15ch;
     }
-    @media (max-width: 600px) {
-      h1 { width: 100%; font-size: 36px; }
+    .hero .lede { font-size: clamp(18px, 2.1vw, 22px); max-width: 38em; color: #d7dfec; }
+    .hero .lede strong { color: #fff; font-weight: 600; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0 40px; }
+    .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 16px; }
+    .btn-primary { background: var(--ninja); color: #fff; }
+    .btn-primary:hover { background: #1f7ef0; }
+    .btn-quiet { border: 1px solid rgba(238, 237, 240, 0.45); color: var(--console-ink); }
+    .btn-quiet:hover { border-color: #fff; color: #fff; }
+
+    /* type-in of the first command, once */
+    .typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 6ch; animation: type 0.9s steps(6) 0.3s both; }
+    @keyframes type { from { width: 0; } to { width: 6ch; } }
+    .reveal { animation: show 0.5s ease-out 1.25s both; }
+    @keyframes show { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      .typed, .reveal, .cursor { animation: none; }
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 88px 0; }
+    h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 14px; }
+    .intro { color: var(--muted); max-width: 40em; font-size: 18px; margin-bottom: 40px; }
+
+    /* Tools: a programs list, not a card grid */
+    .tools { border-top: 2px solid var(--ink); }
+    .tool { display: grid; grid-template-columns: 1fr auto; gap: 8px 32px; align-items: start; padding: 26px 0; border-bottom: 1px solid var(--rule); }
+    .tool h3 { font-size: 21px; line-height: 1.3; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+    .ver { font-family: var(--mono); font-size: 14px; font-weight: 400; color: var(--muted); }
+    .tool p { color: #364457; max-width: 46em; margin-top: 4px; }
+    .tool .links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; padding-top: 2px; }
+    .link-dl { background: var(--ink); color: #fff; }
+    .link-dl:hover { background: #24364d; }
+    .link-src { border: 1px solid #aeb8c5; color: var(--ink); }
+    .link-src:hover { border-color: var(--ink); }
+    .tool .btn { min-height: 40px; padding: 8px 16px; font-size: 15px; }
+    .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+    /* Services on dark */
+    .services { background: var(--ink); color: #e7ecf3; }
+    .services .intro { color: #a9b6c8; }
+    .svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #2c3d55; }
+    .svc a { display: block; padding: 28px 28px 30px 0; text-decoration: none; border-bottom: 1px solid #2c3d55; }
+    .svc a + a { padding-left: 28px; border-left: 1px solid #2c3d55; }
+    .svc strong { display: block; font-size: 20px; color: #fff; margin-bottom: 6px; }
+    .svc span { color: #a9b6c8; }
+    .svc .host { display: block; margin-top: 14px; font-family: var(--mono); font-size: 14px; color: var(--ninja); }
+    .svc a:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+
+    /* About */
+    .about { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+    .about figure img { width: 100%; height: auto; display: block; border-radius: 6px; }
+    .about figcaption { margin-top: 10px; font-size: 14px; color: var(--muted); }
+    .about p + p { margin-top: 14px; }
+    .about p { font-size: 18px; color: #2a384a; }
+    .skills { list-style: none; margin-top: 22px; display: grid; gap: 10px; }
+    .skills li { padding-left: 18px; position: relative; color: #2a384a; }
+    .skills li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 8px; height: 2px; background: var(--ninja); }
+
+    /* Contact */
+    .contact { background: var(--console); color: var(--console-ink); }
+    .contact .prompt { margin-bottom: 14px; }
+    .contact h2 { color: #fff; }
+    .contact .intro { color: #c3cfe1; }
+    .contact .actions { margin-bottom: 0; }
+
+    footer { background: var(--console); color: #8fa3c2; border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 26px 0 34px; font-size: 14px; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; }
+    footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 20px; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: #fff; text-decoration: underline; }
+
+    @media (max-width: 860px) {
+      .svc { grid-template-columns: 1fr; }
+      .svc a, .svc a + a { padding: 22px 0; border-left: 0; }
+      .about { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 640px) {
+      .bar nav a:not(:last-child) { display: none; }
+      .mascot { display: none; }
+      .hero .copy { padding-right: 0; }
+      .hero { padding: 48px 0 64px; }
+      .prompt { font-size: 15px; }
+      section { padding: 64px 0; }
+      .tool { grid-template-columns: 1fr; }
+      .tool .links { justify-content: flex-start; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <a class="brand" href="/">
-      <img src="assets/logo.png" alt="PcNinja logo" width="40" height="40">
-      <span>PcNinja</span>
-    </a>
+  <header class="console">
+    <div class="wrap bar">
+      <a class="brand" href="/"><img src="assets/logo.png" alt="" width="40" height="40">PcNinja</a>
+      <nav aria-label="Main">
+        <a href="#tools">Tools</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="wrap hero">
+      <img class="mascot reveal" src="assets/logo-512.png" alt="" width="512" height="512">
+      <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cmd typed">whoami</span></p>
+      <div class="copy reveal">
+        <h1>Javier Torres. SysAdmin by day, automation builder by night.</h1>
+        <p class="lede">I build <strong>PowerShell scripts and Windows tools</strong> that simplify IT, and help people pause before making costly mistakes. Everything here is free to use.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#tools">Browse my tools</a>
+          <a class="btn btn-quiet" href="https://help.pcninja.pro/">Get remote help</a>
+        </div>
+        <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cursor"></span></p>
+      </div>
+    </div>
   </header>
-  <main class="hero">
-    <h1>Under construction...</h1>
+
+  <main>
+    <section id="tools">
+      <div class="wrap">
+        <h2>Tools I build</h2>
+        <p class="intro">Windows utilities for technicians and advanced home users. Each one is open on GitHub, with release notes and checksums for every download.</p>
+
+        <div class="tools">
+          <article class="tool">
+            <div>
+              <h3>Windows Upgrade Tool <span class="ver" data-repo="Win-Upgrade-Tool-by-PcNinja">v1.0.0</span></h3>
+              <p>Guides an in-place upgrade to Windows 10 or 11 on x64 PCs, including older hardware. Portable app with a GUI and a command line. Back up your files first.</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja/releases/latest">Download</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja">Source</a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div>
+              <h3>WinUpdate Tool <span class="ver" data-repo="PcNinja-WinUpdateTool-V2">v2.2.5</span></h3>
+              <p>Checks, installs and schedules Windows updates, and audits drivers. Comes as an MSI for deployment or as a portable EXE.</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2/releases/latest">Download</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2">Source</a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div>
+              <h3>Smart Office Installer <span class="ver" data-repo="pcninja-smart-office-installer">v3.3.9</span></h3>
+              <p>Installs or removes Microsoft Office through Microsoft's own Office Deployment Tool: Office LTSC 2024 or Microsoft 365, with language, Visio and Project options. You need a valid Office license.</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://office.pcninja.pro/">Download</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/pcninja-smart-office-installer">Source</a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div>
+              <h3>ChatGPT/Codex RTL Fix <span class="ver" data-repo="codex-rtl-fix">v0.1.0</span></h3>
+              <p>Makes Hebrew, Arabic and mixed right-to-left text readable in the ChatGPT/Codex desktop app on Windows, while code stays left-to-right.</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/codex-rtl-fix/releases/latest">Download</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/codex-rtl-fix">Source</a>
+            </div>
+          </article>
+        </div>
+        <p class="note">Looking for the older WinUpdate Tool V1? It's still on <a href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1/releases">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="wrap">
+        <h2>Need a hand?</h2>
+        <p class="intro">Most of this runs on a not-for-profit basis. Tell me what's going on and I'll take it from there.</p>
+        <div class="svc">
+          <a href="https://help.pcninja.pro/">
+            <strong>Remote support</strong>
+            <span>Download a remote-assistance app and I'll connect to your PC to fix it with you.</span>
+            <span class="host">help.pcninja.pro</span>
+          </a>
+          <a href="https://win11.pcninja.pro/">
+            <strong>Clean Windows ISOs</strong>
+            <span>Windows 11 and 10 Pro install images, with or without the essentials preinstalled.</span>
+            <span class="host">win11.pcninja.pro</span>
+          </a>
+          <a href="https://office.pcninja.pro/">
+            <strong>Office in one click</strong>
+            <span>The Smart Office Installer, straight from its latest release.</span>
+            <span class="host">office.pcninja.pro</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <figure>
+          <img src="assets/hero-1280.jpg" alt="Javier's desk: a hand on the mouse and a tabby cat asleep on his arm" width="1280" height="576" loading="lazy">
+          <figcaption>The office. Quality control is asleep on my arm.</figcaption>
+        </figure>
+        <div>
+          <h2>About me</h2>
+          <p>I'm a systems administrator in Israel. My day job is keeping an organization's Windows endpoints deployed, patched and monitored; my evenings go into turning the fixes I repeat most into tools anyone can run.</p>
+          <p>PcNinja is where those tools, and the help I give friends, family and small businesses, live.</p>
+          <ul class="skills">
+            <li>Endpoint management and software deployment with HCL BigFix</li>
+            <li>Monitoring with Microsoft SCOM and custom management packs</li>
+            <li>PowerShell and C# automation for Windows</li>
+            <li>Cisco routing and switching</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cmd">Get-Help</span></p>
+        <h2>Get in touch</h2>
+        <p class="intro">For a support request, fill in the short service form. For anything about the tools, open an issue on GitHub.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://help.pcninja.pro/aboutMe/contact/">Open the service form</a>
+          <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler">GitHub profile</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> PcNinja, Javier Torres</span>
+      <ul>
+        <li><a href="https://help.pcninja.pro/">Remote support</a></li>
+        <li><a href="https://win11.pcninja.pro/">Windows ISOs</a></li>
+        <li><a href="https://office.pcninja.pro/">Office installer</a></li>
+        <li><a href="https://github.com/JavierTorresFelendler">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Keep version labels current: read each repo's latest release from GitHub.
+    // If GitHub can't be reached, the versions written above stay as they are.
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.ver[data-repo]').forEach(function (el) {
+        fetch('https://api.github.com/repos/JavierTorresFelendler/' + el.dataset.repo + '/releases/latest')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rel) { if (rel && rel.tag_name) el.textContent = rel.tag_name; })
+          .catch(function () {});
+      });
+    })();
+  </script>
 </body>
 </html>
