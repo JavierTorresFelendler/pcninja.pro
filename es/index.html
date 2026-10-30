@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PcNinja - Javier Torres</title>
+  <meta name="description" content="Javier Torres (PcNinja): administrador de sistemas y creador de herramientas gratuitas para Windows: actualización, Windows Update e instalador de Office, soporte remoto e ISOs limpias de Windows.">
+  <link rel="canonical" href="https://www.pcninja.pro/es/">
+  <link rel="alternate" hreflang="en" href="https://www.pcninja.pro/">
+  <link rel="alternate" hreflang="es" href="https://www.pcninja.pro/es/">
+  <link rel="alternate" hreflang="he" href="https://www.pcninja.pro/he/">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcninja.pro/">
+  <meta property="og:title" content="PcNinja - Javier Torres">
+  <meta property="og:description" content="Administrador de sistemas de día, creador de automatizaciones de noche. Herramientas gratuitas para Windows, soporte remoto e ISOs limpias.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.pcninja.pro/es/">
+  <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <meta name="theme-color" content="#012456">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>(function(){var P={en:'/',es:'/es/',he:'/he/'},K='pcninja-lang',s=null,q=/[?&]lang=(en|es|he)\b/.exec(location.search);
+try{if(q){localStorage.setItem(K,q[1]);}s=localStorage.getItem(K);}catch(e){}
+if(q){history.replaceState(null,'',location.pathname+location.hash);return;}
+if(location.pathname!=='/')return;
+if(!s){var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var c=String(L[i]).slice(0,2).toLowerCase();if(c==='iw')c='he';if(P[c]){s=c;break;}}}
+if(s&&s!=='en'&&P[s])location.replace(P[s]+location.hash);})();</script>
+</head>
+<body>
+  <header class="console">
+    <div class="wrap bar">
+      <a class="brand" href="/es/"><img src="/assets/logo.png" alt="" width="40" height="40">PcNinja</a>
+      <div class="menus">
+        <nav aria-label="Main">
+          <a href="#tools">Herramientas</a>
+          <a href="#services">Servicios</a>
+          <a href="#about">Sobre mí</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+        <ul class="langs" aria-label="Language"><li><a href="/?lang=en" hreflang="en" lang="en">EN</a></li><li><a href="/es/?lang=es" hreflang="es" lang="es" aria-current="true">ES</a></li><li><a href="/he/?lang=he" hreflang="he" lang="he">עב</a></li></ul>
+      </div>
+    </div>
+
+    <div class="wrap hero">
+      <img class="mascot reveal" src="/assets/logo-512.png" alt="" width="512" height="512">
+      <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cmd typed">whoami</span></p>
+      <div class="copy reveal">
+        <h1>Javier Torres. Sysadmin de día, automatizador de noche.</h1>
+        <p class="lede">Creo <strong>scripts de PowerShell y herramientas para Windows</strong> que simplifican la informática y ayudan a la gente a pensarlo dos veces antes de cometer un error costoso. Todo lo que hay aquí es gratuito.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#tools">Ver mis herramientas</a>
+          <a class="btn btn-quiet" href="https://help.pcninja.pro/es/">Pedir ayuda remota</a>
+        </div>
+        <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cursor"></span></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="tools">
+      <div class="wrap">
+        <h2>Herramientas que creo</h2>
+        <p class="intro">Utilidades de Windows para técnicos y usuarios avanzados. Todas están abiertas en GitHub, con notas de versión y sumas de verificación para cada descarga.</p>
+
+        <div class="tools">
+          <article class="tool">
+            <div>
+              <h3>Windows Upgrade Tool <span class="ver" data-repo="Win-Upgrade-Tool-by-PcNinja">v1.0.0</span></h3>
+              <p>Guía una actualización in situ a Windows 10 u 11 en PCs x64, incluido hardware antiguo. App portátil con interfaz gráfica y línea de comandos. Haz una copia de seguridad de tus archivos antes.</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja/releases/latest">Descargar</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja">Código</a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div>
+              <h3>WinUpdate Tool <span class="ver" data-repo="PcNinja-WinUpdateTool-V2">v2.2.5</span></h3>
+              <p>Un actualizador independiente que funciona por separado de Windows Update. Úsalo cuando un PC no se actualiza solo o para agilizar el trabajo de un técnico: busca, instala y programa actualizaciones, revisa los controladores y puede restablecer un servicio de actualización atascado. Disponible como MSI para despliegue o como EXE portátil.</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2/releases/latest">Descargar</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2">Código</a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div>
+              <h3>Smart Office Installer <span class="ver" data-repo="pcninja-smart-office-installer">v3.3.9</span></h3>
+              <p>Instala o desinstala Microsoft Office con la herramienta oficial de Microsoft, Office Deployment Tool: Office LTSC 2024 o Microsoft 365, con opciones de idioma, Visio y Project. Necesitas una licencia válida de Office.</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://office.pcninja.pro/">Descargar</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/pcninja-smart-office-installer">Código</a>
+            </div>
+          </article>
+
+        </div>
+        <p class="note">¿Buscas el antiguo WinUpdate Tool V1? Sigue en <a href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1/releases">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="wrap">
+        <h2>¿Necesitas ayuda?</h2>
+        <p class="intro">Casi todo esto funciona sin ánimo de lucro. Cuéntame qué pasa y yo me encargo.</p>
+        <div class="svc">
+          <a href="https://help.pcninja.pro/es/">
+            <strong>Soporte remoto</strong>
+            <span>Descarga una app de asistencia remota y me conecto a tu PC para arreglarlo contigo.</span>
+            <span class="host">help.pcninja.pro</span>
+          </a>
+          <a href="https://win11.pcninja.pro/">
+            <strong>ISOs limpias de Windows</strong>
+            <span>Imágenes de instalación de Windows 11 y 10 Pro, con o sin los programas básicos preinstalados.</span>
+            <span class="host">win11.pcninja.pro</span>
+          </a>
+          <a href="https://office.pcninja.pro/">
+            <strong>Office en un clic</strong>
+            <span>El Smart Office Installer, directo desde su última versión.</span>
+            <span class="host">office.pcninja.pro</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <figure>
+          <img src="/assets/hero-1280.jpg" alt="El escritorio de Javier: una mano en el ratón y un gato atigrado dormido sobre su brazo" width="1280" height="576" loading="lazy">
+          <figcaption>La oficina. Control de calidad duerme sobre mi brazo.</figcaption>
+        </figure>
+        <div>
+          <h2>Sobre mí</h2>
+          <p>Soy administrador de sistemas en Israel. En mi trabajo mantengo los equipos Windows de una organización instalados, actualizados y monitorizados; por las tardes convierto los arreglos que más repito en herramientas que cualquiera puede usar.</p>
+          <p>PcNinja es donde viven esas herramientas, y la ayuda que doy a amigos, familia y pequeñas empresas.</p>
+          <ul class="skills">
+            <li>Gestión de equipos y despliegue de software con HCL BigFix</li>
+            <li>Monitorización con Microsoft SCOM y management packs propios</li>
+            <li>Automatización de Windows con PowerShell y C#</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cmd">Get-Help</span></p>
+        <h2>Contacto</h2>
+        <p class="intro">Para una solicitud de soporte, rellena el breve formulario de servicio. Para cualquier cosa sobre las herramientas, abre un issue en GitHub.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://help.pcninja.pro/es/contact/">Abrir el formulario</a>
+          <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler">Perfil de GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> PcNinja, Javier Torres</span>
+      <ul>
+        <li><a href="https://help.pcninja.pro/es/">Soporte remoto</a></li>
+        <li><a href="https://win11.pcninja.pro/">ISOs de Windows</a></li>
+        <li><a href="https://office.pcninja.pro/">Instalador de Office</a></li>
+        <li><a href="https://github.com/JavierTorresFelendler">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Keep version labels current: read each repo's latest release from GitHub.
+    // If GitHub can't be reached, the versions written above stay as they are.
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.ver[data-repo]').forEach(function (el) {
+        fetch('https://api.github.com/repos/JavierTorresFelendler/' + el.dataset.repo + '/releases/latest')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rel) { if (rel && rel.tag_name) el.textContent = rel.tag_name; })
+          .catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{desc}}">
+  <link rel="canonical" href="https://www.pcninja.pro{{path}}">
+{{alternates}}
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{og_desc}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.pcninja.pro{{path}}">
+  <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <meta name="theme-color" content="#012456">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600{{font_extra}}&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>{{langjs}}</script>
+</head>
+<body>
+  <header class="console">
+    <div class="wrap bar">
+      <a class="brand" href="{{path}}"><img src="/assets/logo.png" alt="" width="40" height="40">PcNinja</a>
+      <div class="menus">
+        <nav aria-label="Main">
+          <a href="#tools">{{nav_tools}}</a>
+          <a href="#services">{{nav_services}}</a>
+          <a href="#about">{{nav_about}}</a>
+          <a href="#contact">{{nav_contact}}</a>
+        </nav>
+{{langs}}
+      </div>
+    </div>
+
+    <div class="wrap hero">
+      <img class="mascot reveal" src="/assets/logo-512.png" alt="" width="512" height="512">
+      <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cmd typed">whoami</span></p>
+      <div class="copy reveal">
+        <h1>{{h1}}</h1>
+        <p class="lede">{{lede}}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#tools">{{btn_tools}}</a>
+          <a class="btn btn-quiet" href="{{help}}">{{btn_help}}</a>
+        </div>
+        <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cursor"></span></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="tools">
+      <div class="wrap">
+        <h2>{{tools_h2}}</h2>
+        <p class="intro">{{tools_intro}}</p>
+
+        <div class="tools">
+          <article class="tool">
+            <div>
+              <h3>Windows Upgrade Tool <span class="ver" data-repo="Win-Upgrade-Tool-by-PcNinja">v1.0.0</span></h3>
+              <p>{{upg}}</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja/releases/latest">{{dl}}</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja">{{src}}</a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div>
+              <h3>WinUpdate Tool <span class="ver" data-repo="PcNinja-WinUpdateTool-V2">v2.2.5</span></h3>
+              <p>{{wu}}</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2/releases/latest">{{dl}}</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2">{{src}}</a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div>
+              <h3>Smart Office Installer <span class="ver" data-repo="pcninja-smart-office-installer">v3.3.9</span></h3>
+              <p>{{off}}</p>
+            </div>
+            <div class="links">
+              <a class="btn link-dl" href="https://office.pcninja.pro/">{{dl}}</a>
+              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/pcninja-smart-office-installer">{{src}}</a>
+            </div>
+          </article>
+
+        </div>
+        <p class="note">{{note}} <a href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1/releases">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="wrap">
+        <h2>{{svc_h2}}</h2>
+        <p class="intro">{{svc_intro}}</p>
+        <div class="svc">
+          <a href="{{help}}">
+            <strong>{{svc1}}</strong>
+            <span>{{svc1_t}}</span>
+            <span class="host">help.pcninja.pro</span>
+          </a>
+          <a href="https://win11.pcninja.pro/">
+            <strong>{{svc2}}</strong>
+            <span>{{svc2_t}}</span>
+            <span class="host">win11.pcninja.pro</span>
+          </a>
+          <a href="https://office.pcninja.pro/">
+            <strong>{{svc3}}</strong>
+            <span>{{svc3_t}}</span>
+            <span class="host">office.pcninja.pro</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <figure>
+          <img src="/assets/hero-1280.jpg" alt="{{alt}}" width="1280" height="576" loading="lazy">
+          <figcaption>{{cap}}</figcaption>
+        </figure>
+        <div>
+          <h2>{{about_h2}}</h2>
+          <p>{{about1}}</p>
+          <p>{{about2}}</p>
+          <ul class="skills">
+            <li>{{sk1}}</li>
+            <li>{{sk2}}</li>
+            <li>{{sk3}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cmd">Get-Help</span></p>
+        <h2>{{ct_h2}}</h2>
+        <p class="intro">{{ct_intro}}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="{{help_form}}">{{ct_form}}</a>
+          <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler">{{ct_gh}}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> PcNinja, Javier Torres</span>
+      <ul>
+        <li><a href="{{help}}">{{f_help}}</a></li>
+        <li><a href="https://win11.pcninja.pro/">{{f_iso}}</a></li>
+        <li><a href="https://office.pcninja.pro/">{{f_office}}</a></li>
+        <li><a href="https://github.com/JavierTorresFelendler">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Keep version labels current: read each repo's latest release from GitHub.
+    // If GitHub can't be reached, the versions written above stay as they are.
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.ver[data-repo]').forEach(function (el) {
+        fetch('https://api.github.com/repos/JavierTorresFelendler/' + el.dataset.repo + '/releases/latest')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rel) { if (rel && rel.tag_name) el.textContent = rel.tag_name; })
+          .catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>
