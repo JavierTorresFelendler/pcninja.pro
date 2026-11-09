@@ -51,6 +51,15 @@ SLUG = {"wintool": "wintool", "upgrade": "windows-upgrade-tool", "v2": "winupdat
 REPO = {"wintool": "WinTool-by-PcNinja", "upgrade": "Win-Upgrade-Tool-by-PcNinja", "v2": "PcNinja-WinUpdateTool-V2",
         "v1": "PcNinja-WinUpdateTool-V1", "office": "pcninja-smart-office-installer"}
 DL = {k: GH + r + "/releases/latest" for k, r in REPO.items()}
+# Direct-download addresses (a forward straight to the latest file). Add the others as they exist.
+DIRECT = {"wintool": "https://wintool.pcninja.pro/"}
+
+def dl_buttons(t, key, gh_class):
+    """Direct download first when there is one, then the GitHub release."""
+    if key in DIRECT:
+        return '<a class="btn btn-primary" href="%s">%s</a><a class="btn %s" href="%s">%s</a>' % (
+            DIRECT[key], t["direct"], gh_class, DL[key], t["dl_gh"])
+    return '<a class="btn btn-primary" href="%s">%s</a>' % (DL[key], t["dl"])
 
 def tool_path(code, key):
     return PATHS[code] + "apps/" + SLUG[key] + "/"
@@ -108,7 +117,7 @@ def tools_section(code, d, s):
             <h3><bdi>WinTool by PcNinja</bdi> <span class="ver" data-repo="%s">%s</span> <span class="pill">%s</span></h3>
             <p>%s</p>
             <div class="actions">
-              <a class="btn btn-primary" href="%s">%s</a>
+              %s
               <a class="btn btn-quiet" href="%s">%s</a>
               <a class="btn btn-quiet" href="%s">%s</a>
             </div>
@@ -121,7 +130,7 @@ def tools_section(code, d, s):
         <p class="subintro">%s</p>
 %s%s      </div>
     </section>""" % (s["tools_h2"], s["tools_intro"], REPO["wintool"], TT.VER["wintool"], t["latest"], t["feat_p"],
-                      DL["wintool"], t["dl"], tool_path(code, "wintool"), t["more_wt"], GH + REPO["wintool"], t["src"],
+                      dl_buttons(t, "wintool", "btn-quiet"), tool_path(code, "wintool"), t["more_wt"], GH + REPO["wintool"], t["src"],
                       t["unsigned"], caps, t["how_h"], t["how_p"], nxt, rows)
 
 def tool_content(code, d, key):
@@ -207,7 +216,7 @@ def main():
                       title=title, desc=plain(x["lede"]), og_desc=plain(x["lede"]), crumb_tools=t["tools"],
                       name=TT.NAME[key], name_short=TT.SHORT[key], cmd=TT.CMD[key], repo=REPO[key], ver=TT.VER[key],
                       pill=(' <span class="pill">%s</span>' % t["latest"]) if key == "wintool" else "",
-                      lede=x["lede"], dl_url=DL[key], dl=t["dl"], src_url=GH + REPO[key], src=t["src"],
+                      lede=x["lede"], dl_buttons=dl_buttons(t, key, "btn-quiet"), src_url=GH + REPO[key], src=t["src"],
                       notes_url=GH + REPO[key] + "/releases", notes=t["notes"], content=tool_content(code, d, key))
             write(tool_path(code, key), fill(ttpl, tv)); urls.append(tool_path(code, key))
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8", newline="\n") as f:
