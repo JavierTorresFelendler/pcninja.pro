@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{desc}}">
+  <link rel="canonical" href="https://www.pcninja.pro{{path}}">
+{{alternates}}
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{og_desc}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pcninja.pro{{path}}">
+  <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <meta name="theme-color" content="#012456">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600{{font_extra}}&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>{{langjs}}</script>
+</head>
+<body>
+  <header class="console">
+    <div class="wrap bar">
+      <a class="brand" href="{{home}}"><img src="/assets/logo.png" alt="" width="40" height="40">PcNinja</a>
+      <div class="menus">
+        <nav aria-label="Main">
+          <a href="{{home}}#tools">{{nav_tools}}</a>
+          <a href="{{home}}#services">{{nav_services}}</a>
+          <a href="{{home}}#about">{{nav_about}}</a>
+          <a href="{{home}}#contact">{{nav_contact}}</a>
+        </nav>
+{{langs}}
+      </div>
+    </div>
+
+
+    <div class="wrap toolhero">
+      <p class="crumb"><a href="{{home}}#tools">{{crumb_tools}}</a> &#8250; <bdi>{{name_short}}</bdi></p>
+      <p class="prompt" aria-hidden="true" style="margin-top: 18px">PS C:\Users\Javier&gt; <span class="cmd">{{cmd}}</span></p>
+      <h1><bdi>{{name}}</bdi> <span class="ver" data-repo="{{repo}}">{{ver}}</span>{{pill}}</h1>
+      <p class="lede">{{lede}}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="{{dl_url}}">{{dl}}</a>
+        <a class="btn btn-quiet" href="{{src_url}}">{{src}}</a>
+        <a class="btn btn-quiet" href="{{notes_url}}">{{notes}}</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap toolpage">
+{{content}}
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> PcNinja, Javier Torres</span>
+      <ul>
+        <li><a href="{{help}}">{{f_help}}</a></li>
+        <li><a href="https://win11.pcninja.pro/">{{f_iso}}</a></li>
+        <li><a href="https://office.pcninja.pro/">{{f_office}}</a></li>
+        <li><a href="https://github.com/JavierTorresFelendler">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Keep version labels current: read each repo's latest release from GitHub.
+    // If GitHub can't be reached, the versions written above stay as they are.
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.ver[data-repo]').forEach(function (el) {
+        fetch('https://api.github.com/repos/JavierTorresFelendler/' + el.dataset.repo + '/releases/latest')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rel) { if (rel && rel.tag_name) el.textContent = rel.tag_name; })
+          .catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>

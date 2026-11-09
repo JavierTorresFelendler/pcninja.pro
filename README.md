@@ -8,7 +8,7 @@ Source of the PcNinja website, served by GitHub Pages at https://www.pcninja.pro
 - `robots.txt`, `sitemap.xml` – search-engine hints
 - `CNAME` – tells GitHub Pages which custom domain this site answers on
 
-To add a tool: copy one `<article class="tool">` block in `index.html`, change the name,
-description, repo name in `data-repo`, and the two links.
+Tools section and tool pages (`/apps/<slug>/`, also under `/es/` and `/he/`): edit the text in
+`tools/tools_text.py` (all three languages), then run `python tools/build.py`.
 
 Any push to `main` is published automatically within a minute or two.

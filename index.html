@@ -65,42 +65,88 @@ if(s&&s!=='en'&&P[s])location.replace(P[s]+location.hash);})();</script>
         <h2>Tools I build</h2>
         <p class="intro">Windows utilities for technicians and advanced home users. Each one is open on GitHub, with release notes and checksums for every download.</p>
 
-        <div class="tools">
-          <article class="tool">
-            <div>
-              <h3>Windows Upgrade Tool <span class="ver" data-repo="Win-Upgrade-Tool-by-PcNinja">v1.0.0</span></h3>
-              <p>Guides an in-place upgrade to Windows 10 or 11 on x64 PCs, including older hardware. Portable app with a GUI and a command line. Back up your files first.</p>
+        <div class="feat">
+          <div>
+            <p class="prompt" aria-hidden="true">PS C:\Users\Javier&gt; <span class="cmd">.\WinTool-by-PcNinja.exe</span></p>
+            <h3><bdi>WinTool by PcNinja</bdi> <span class="ver" data-repo="WinTool-by-PcNinja">v1.0.2</span> <span class="pill">Latest</span></h3>
+            <p>One app for Windows Update, Windows Upgrade and Office. Run it portable or install it from the same EXE; the MSI is there for silent deployment. English, Hebrew and Spanish.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://github.com/JavierTorresFelendler/WinTool-by-PcNinja/releases/latest">Download</a>
+              <a class="btn btn-quiet" href="/apps/wintool/">More about WinTool</a>
+              <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler/WinTool-by-PcNinja">Source</a>
             </div>
-            <div class="links">
-              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja/releases/latest">Download</a>
-              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja">Source</a>
-            </div>
-          </article>
-
-          <article class="tool">
-            <div>
-              <h3>WinUpdate Tool <span class="ver" data-repo="PcNinja-WinUpdateTool-V2">v2.2.5</span></h3>
-              <p>A standalone updater that runs separately from Windows' built-in Windows Update. Use it when a PC won't update on its own, or to speed up a technician's work: it checks, installs and schedules updates, audits drivers and can reset a stuck update service. Available as an MSI for deployment or a portable EXE.</p>
-            </div>
-            <div class="links">
-              <a class="btn link-dl" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2/releases/latest">Download</a>
-              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2">Source</a>
-            </div>
-          </article>
-
-          <article class="tool">
-            <div>
-              <h3>Smart Office Installer <span class="ver" data-repo="pcninja-smart-office-installer">v3.3.9</span></h3>
-              <p>Installs or removes Microsoft Office through Microsoft's own Office Deployment Tool: Office LTSC 2024 or Microsoft 365, with language, Visio and Project options. You need a valid Office license.</p>
-            </div>
-            <div class="links">
-              <a class="btn link-dl" href="https://office.pcninja.pro/">Download</a>
-              <a class="btn link-src" href="https://github.com/JavierTorresFelendler/pcninja-smart-office-installer">Source</a>
-            </div>
-          </article>
-
+            <p class="small">Files are not code-signed; Windows SmartScreen may warn. Check them against SHA256SUMS.txt.</p>
+          </div>
+          <ul class="caps"><li><strong>Windows Update</strong><span>Scan, install, schedule, restart handling. Grew out of WinUpdate Tool.</span></li><li><strong>Windows Upgrade</strong><span>In-place upgrade with checks before it starts. Grew out of Windows Upgrade Tool.</span></li><li><strong>Office</strong><span>Install, offline package, remove. Grew out of Smart Office Installer.</span></li></ul>
         </div>
-        <p class="note">Looking for the older WinUpdate Tool V1? It's still on <a href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1/releases">GitHub</a>.</p>
+
+        <h3 class="sub">How it got here</h3>
+        <p class="subintro">I&#8217;ve been building Windows since the happy days of XP. Every tool here comes from one idea: keep the hardware people already have, and save them every cost I can. Newest first; each step has its own page.</p>
+        <div class="tl next">
+          <div class="when"><div class="lane">Next</div><div class="date">Soon</div></div>
+          <div class="rail" aria-hidden="true"><i></i><b></b><i></i></div>
+          <article class="tool"><div><h3>What&#8217;s next</h3><p>Some form of management for personal, home and small-business setups, at the lowest cost possible: a clear view of the health of every PC in the &#8220;organization&#8221;, and real control over it. Soon in my home lab.</p></div></article>
+        </div>
+        <div class="tl now">
+          <div class="when"><div class="lane">Today</div><div class="date">Nov 2026</div></div>
+          <div class="rail" aria-hidden="true"><i></i><b></b><i></i></div>
+          <article class="tool">
+            <div>
+              <h3><bdi>WinTool by PcNinja</bdi> <span class="ver" data-repo="WinTool-by-PcNinja">v1.0.2</span> <span class="tag">Latest</span></h3>
+              <p>All of the steps below in one app. Concept on 30 Oct 2026, first official version on 7 Nov.</p>
+              <div class="became"><b aria-hidden="true">&#8593;</b>Windows Update + Windows Upgrade + Office, one EXE</div>
+            </div>
+            <div class="links"><a class="more" href="/apps/wintool/">More about WinTool &#8594;</a></div>
+          </article>
+        </div>
+        <div class="tl">
+          <div class="when"><div class="lane">Step 4</div><div class="date">Oct 2026</div></div>
+          <div class="rail" aria-hidden="true"><i></i><b></b><i></i></div>
+          <article class="tool">
+            <div>
+              <h3><bdi>Windows Upgrade Tool</bdi> <span class="ver" data-repo="Win-Upgrade-Tool-by-PcNinja">v1.3.0</span> <span class="tag">In WinTool</span></h3>
+              <p>In-place upgrade to Windows 10 or 11, built above all for PCs Microsoft no longer supports on paper. From first test to release candidate in two days.</p>
+              <div class="became"><b aria-hidden="true">&#8593;</b>Became the Windows Upgrade page in WinTool</div>
+            </div>
+            <div class="links"><a class="more" href="/apps/windows-upgrade-tool/">The story &#8594;</a><a class="btn link-dl" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja/releases/latest">Download</a><a class="btn link-src" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja">Source</a></div>
+          </article>
+        </div>
+        <div class="tl">
+          <div class="when"><div class="lane">Step 3</div><div class="date">Jul 2026</div></div>
+          <div class="rail" aria-hidden="true"><i></i><b></b><i></i></div>
+          <article class="tool">
+            <div>
+              <h3><bdi>WinUpdate Tool V2</bdi> <span class="ver" data-repo="PcNinja-WinUpdateTool-V2">v2.2.8</span> <span class="tag">In WinTool</span></h3>
+              <p>A new interface with an update channel, scheduling, driver audit and a reset for a stuck update service. MSI or portable EXE.</p>
+              <div class="became"><b aria-hidden="true">&#8593;</b>Became the Windows Update and Schedule pages in WinTool</div>
+            </div>
+            <div class="links"><a class="more" href="/apps/winupdate-tool-v2/">The story &#8594;</a><a class="btn link-dl" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2/releases/latest">Download</a><a class="btn link-src" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V2">Source</a></div>
+          </article>
+        </div>
+        <div class="tl">
+          <div class="when"><div class="lane">Step 2</div><div class="date">May 2025</div></div>
+          <div class="rail" aria-hidden="true"><i></i><b></b><i></i></div>
+          <article class="tool">
+            <div>
+              <h3><bdi>WinUpdate Tool V1</bdi> <span class="ver" data-repo="PcNinja-WinUpdateTool-V1">v1.1.2</span> <span class="tag">Retired</span></h3>
+              <p>One small EXE for running Windows Update on PCs that would not update on their own. By June 2026 it had an MSI, a portable EXE and a command line.</p>
+              <div class="became"><b aria-hidden="true">&#8593;</b>Grew into WinUpdate Tool V2</div>
+            </div>
+            <div class="links"><a class="more" href="/apps/winupdate-tool-v1/">The story &#8594;</a><a class="btn link-dl" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1/releases/latest">Download</a><a class="btn link-src" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1">Source</a></div>
+          </article>
+        </div>
+        <div class="tl last">
+          <div class="when"><div class="lane">Step 1</div><div class="date">Oct 2024</div></div>
+          <div class="rail" aria-hidden="true"><i></i><b></b><i></i></div>
+          <article class="tool">
+            <div>
+              <h3><bdi>Smart Office Installer</bdi> <span class="ver" data-repo="pcninja-smart-office-installer">v3.3.15</span> <span class="tag">In WinTool</span></h3>
+              <p>Where it started: a few Office Deployment Tool settings and a one-line script. Then a batch installer, a GUI in March 2026, and three major versions in one week.</p>
+              <div class="became"><b aria-hidden="true">&#8593;</b>Became the Office page in WinTool</div>
+            </div>
+            <div class="links"><a class="more" href="/apps/smart-office-installer/">The story &#8594;</a><a class="btn link-dl" href="https://office.pcninja.pro/">Download</a><a class="btn link-src" href="https://github.com/JavierTorresFelendler/pcninja-smart-office-installer">Source</a></div>
+          </article>
+        </div>
       </div>
     </section>
 

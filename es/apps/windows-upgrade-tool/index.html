@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Windows Upgrade Tool | PcNinja</title>
+  <meta name="description" content="Una actualización in situ a Windows 10 u 11, pensada sobre todo para los PCs que Microsoft ya no admite sobre el papel.">
+  <link rel="canonical" href="https://www.pcninja.pro/es/apps/windows-upgrade-tool/">
+  <link rel="alternate" hreflang="en" href="https://www.pcninja.pro/apps/windows-upgrade-tool/">
+  <link rel="alternate" hreflang="es" href="https://www.pcninja.pro/es/apps/windows-upgrade-tool/">
+  <link rel="alternate" hreflang="he" href="https://www.pcninja.pro/he/apps/windows-upgrade-tool/">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcninja.pro/apps/windows-upgrade-tool/">
+  <meta property="og:title" content="Windows Upgrade Tool | PcNinja">
+  <meta property="og:description" content="Una actualización in situ a Windows 10 u 11, pensada sobre todo para los PCs que Microsoft ya no admite sobre el papel.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pcninja.pro/es/apps/windows-upgrade-tool/">
+  <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <meta name="theme-color" content="#012456">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>(function(){var P={en:'/',es:'/es/',he:'/he/'},K='pcninja-lang',s=null,q=/[?&]lang=(en|es|he)\b/.exec(location.search);
+try{if(q){localStorage.setItem(K,q[1]);}s=localStorage.getItem(K);}catch(e){}
+if(q){history.replaceState(null,'',location.pathname+location.hash);return;}
+if(location.pathname!=='/')return;
+if(!s){var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var c=String(L[i]).slice(0,2).toLowerCase();if(c==='iw')c='he';if(P[c]){s=c;break;}}}
+if(s&&s!=='en'&&P[s])location.replace(P[s]+location.hash);})();</script>
+</head>
+<body>
+  <header class="console">
+    <div class="wrap bar">
+      <a class="brand" href="/es/"><img src="/assets/logo.png" alt="" width="40" height="40">PcNinja</a>
+      <div class="menus">
+        <nav aria-label="Main">
+          <a href="/es/#tools">Herramientas</a>
+          <a href="/es/#services">Servicios</a>
+          <a href="/es/#about">Sobre mí</a>
+          <a href="/es/#contact">Contacto</a>
+        </nav>
+        <ul class="langs" aria-label="Language"><li><a href="/apps/windows-upgrade-tool/?lang=en" hreflang="en" lang="en">EN</a></li><li><a href="/es/apps/windows-upgrade-tool/?lang=es" hreflang="es" lang="es" aria-current="true">ES</a></li><li><a href="/he/apps/windows-upgrade-tool/?lang=he" hreflang="he" lang="he">עב</a></li></ul>
+      </div>
+    </div>
+
+
+    <div class="wrap toolhero">
+      <p class="crumb"><a href="/es/#tools">Herramientas</a> &#8250; <bdi>Windows Upgrade Tool</bdi></p>
+      <p class="prompt" aria-hidden="true" style="margin-top: 18px">PS C:\Users\Javier&gt; <span class="cmd">Get-Help WinUpgradeTool</span></p>
+      <h1><bdi>Windows Upgrade Tool</bdi> <span class="ver" data-repo="Win-Upgrade-Tool-by-PcNinja">v1.3.0</span></h1>
+      <p class="lede">Una actualización in situ a Windows 10 u 11, pensada sobre todo para los PCs que Microsoft ya no admite sobre el papel.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja/releases/latest">Descargar</a>
+        <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja">Código</a>
+        <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler/Win-Upgrade-Tool-by-PcNinja/releases">Notas de versión</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap toolpage">
+    <p class="strip-h">Su lugar en la historia</p>
+    <div class="strip"><a class="node" href="/es/apps/smart-office-installer/"><strong><bdi>Smart Office Installer</bdi></strong><span>oct 2024</span></a><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/es/apps/winupdate-tool-v1/"><strong><bdi>WinUpdate Tool V1</bdi></strong><span>may 2025</span></a><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/es/apps/winupdate-tool-v2/"><strong><bdi>WinUpdate Tool V2</bdi></strong><span>jul 2026</span></a><div class="arrow" aria-hidden="true">&#8594;</div><div class="node here" aria-current="page"><strong><bdi>Windows Upgrade Tool</bdi></strong><span>oct 2026</span></div><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/es/apps/wintool/"><strong><bdi>WinTool</bdi></strong><span>nov 2026</span></a></div>
+    <div class="cols">
+      <div>
+        <h2>Por qué la creé</h2><p>Con el tiempo llegó la temporada de actualizaciones. Yo ya sabía instalar Windows desde cero esquivando las reglas de hardware más estrictas de Microsoft, pero actualizar in situ siempre fue lo difícil. Así nació Windows Upgrade Tool.</p><p>Con los años aprendí los caminos menos documentados de Microsoft para actualizar in situ sistemas existentes. Se puede decir que le pillé el truco, y las capacidades de la herramienta crecieron con ello.</p><p>Trabajo con Windows desde los alegres tiempos de XP, y terminé mis estudios de ingeniero de sistemas Microsoft poco después de la salida de Server 2003. Con los años seguí afinando un oficio: crear imágenes personalizadas de Windows. Y, sinceramente, lo que Windows realmente necesita de un PC no ha cambiado mucho desde Vista.</p><p>Al mismo tiempo, siempre he sido el técnico de cada comunidad en la que he vivido. Mi regla es sencilla: cuando la vida te va bien, es el momento de devolver. Por eso intento, con sinceridad, conservar el hardware que la gente ya tiene y ahorrarle todos los gastos posibles, sobre todo a quienes menos pueden permitirse un PC nuevo.</p>
+        <h2 class="gap">Cómo creció</h2><ul class="grew"><li><strong>10 oct 2026</strong>Primera prueba privada</li><li><strong>11 oct 2026</strong>Primera versión candidata</li><li><strong>5 nov 2026</strong>1.3.0</li></ul>
+      </div>
+      <div>
+        <h2>Qué hace</h2><ul class="b"><li>Guía una actualización in situ a Windows 10 u 11 en PCs x64, incluido hardware antiguo, desde una ISO o los medios de Microsoft.</li><li>Muestra en una sola pantalla la versión actual de Windows, el almacenamiento y las opciones de origen. Portátil, con interfaz gráfica y línea de comandos.</li><li>La ruta a Windows 11 para hardware no compatible es experimental. Haz una copia de seguridad de tus archivos antes.</li></ul>
+        <h2 class="gap">Qué pasó a WinTool</h2><ul class="b"><li>El mismo motor de actualización, portado a .NET Framework 4.8</li><li>Todas las comprobaciones antes de iniciar Setup: medios, edición, idioma, almacenamiento</li><li>Actualización por línea de comandos con los códigos de salida de WinTool</li></ul><div class="box"><strong>¿Te pasas a WinTool?</strong><p>La página de actualización de Windows en WinTool hace lo mismo, junto a las actualizaciones y Office.</p><a class="more" href="/es/apps/wintool/">Ir a WinTool &#8594;</a></div>
+      </div>
+    </div>
+    <nav class="pager"><a class="more" href="/es/apps/wintool/">&#8592; Más nueva: <bdi>WinTool</bdi></a><a class="more" href="/es/apps/winupdate-tool-v2/">Más antigua: <bdi>WinUpdate Tool V2</bdi> &#8594;</a></nav>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> PcNinja, Javier Torres</span>
+      <ul>
+        <li><a href="https://help.pcninja.pro/es/">Soporte remoto</a></li>
+        <li><a href="https://win11.pcninja.pro/">ISOs de Windows</a></li>
+        <li><a href="https://office.pcninja.pro/">Instalador de Office</a></li>
+        <li><a href="https://github.com/JavierTorresFelendler">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Keep version labels current: read each repo's latest release from GitHub.
+    // If GitHub can't be reached, the versions written above stay as they are.
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.ver[data-repo]').forEach(function (el) {
+        fetch('https://api.github.com/repos/JavierTorresFelendler/' + el.dataset.repo + '/releases/latest')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rel) { if (rel && rel.tag_name) el.textContent = rel.tag_name; })
+          .catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>

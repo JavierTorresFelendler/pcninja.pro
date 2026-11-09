@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Office Installer | PcNinja</title>
+  <meta name="description" content="Installs or removes Microsoft Office through Microsoft's own Office Deployment Tool.">
+  <link rel="canonical" href="https://www.pcninja.pro/apps/smart-office-installer/">
+  <link rel="alternate" hreflang="en" href="https://www.pcninja.pro/apps/smart-office-installer/">
+  <link rel="alternate" hreflang="es" href="https://www.pcninja.pro/es/apps/smart-office-installer/">
+  <link rel="alternate" hreflang="he" href="https://www.pcninja.pro/he/apps/smart-office-installer/">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcninja.pro/apps/smart-office-installer/">
+  <meta property="og:title" content="Smart Office Installer | PcNinja">
+  <meta property="og:description" content="Installs or removes Microsoft Office through Microsoft's own Office Deployment Tool.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pcninja.pro/apps/smart-office-installer/">
+  <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <meta name="theme-color" content="#012456">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>(function(){var P={en:'/',es:'/es/',he:'/he/'},K='pcninja-lang',s=null,q=/[?&]lang=(en|es|he)\b/.exec(location.search);
+try{if(q){localStorage.setItem(K,q[1]);}s=localStorage.getItem(K);}catch(e){}
+if(q){history.replaceState(null,'',location.pathname+location.hash);return;}
+if(location.pathname!=='/')return;
+if(!s){var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var c=String(L[i]).slice(0,2).toLowerCase();if(c==='iw')c='he';if(P[c]){s=c;break;}}}
+if(s&&s!=='en'&&P[s])location.replace(P[s]+location.hash);})();</script>
+</head>
+<body>
+  <header class="console">
+    <div class="wrap bar">
+      <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="40" height="40">PcNinja</a>
+      <div class="menus">
+        <nav aria-label="Main">
+          <a href="/#tools">Tools</a>
+          <a href="/#services">Services</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <ul class="langs" aria-label="Language"><li><a href="/apps/smart-office-installer/?lang=en" hreflang="en" lang="en" aria-current="true">EN</a></li><li><a href="/es/apps/smart-office-installer/?lang=es" hreflang="es" lang="es">ES</a></li><li><a href="/he/apps/smart-office-installer/?lang=he" hreflang="he" lang="he">עב</a></li></ul>
+      </div>
+    </div>
+
+
+    <div class="wrap toolhero">
+      <p class="crumb"><a href="/#tools">Tools</a> &#8250; <bdi>Smart Office Installer</bdi></p>
+      <p class="prompt" aria-hidden="true" style="margin-top: 18px">PS C:\Users\Javier&gt; <span class="cmd">Get-Help SmartOfficeInstaller</span></p>
+      <h1><bdi>Smart Office Installer</bdi> <span class="ver" data-repo="pcninja-smart-office-installer">v3.3.15</span></h1>
+      <p class="lede">Installs or removes Microsoft Office through Microsoft&#8217;s own Office Deployment Tool.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://office.pcninja.pro/">Download</a>
+        <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler/pcninja-smart-office-installer">Source</a>
+        <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler/pcninja-smart-office-installer/releases">Release notes</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap toolpage">
+    <p class="strip-h">Where it fits in the story</p>
+    <div class="strip"><div class="node here" aria-current="page"><strong><bdi>Smart Office Installer</bdi></strong><span>Oct 2024</span></div><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/apps/winupdate-tool-v1/"><strong><bdi>WinUpdate Tool V1</bdi></strong><span>May 2025</span></a><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/apps/winupdate-tool-v2/"><strong><bdi>WinUpdate Tool V2</bdi></strong><span>Jul 2026</span></a><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/apps/windows-upgrade-tool/"><strong><bdi>Windows Upgrade Tool</bdi></strong><span>Oct 2026</span></a><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/apps/wintool/"><strong><bdi>WinTool</bdi></strong><span>Nov 2026</span></a></div>
+    <div class="cols">
+      <div>
+        <h2>Why I built it</h2><p>Since Microsoft moved Office to Click-to-Run, a lot of people have got tangled up installing it.</p><p>For years I solved that for them: install scripts built right into the Windows image, and later silent EXEs.</p><p>Then I moved from support specialist to automation, and changed my approach: instead of installing for people, I started building tools they can use themselves. The installation stays flexible on purpose, because whatever license goes in later changes the installation after the fact. So we start somewhere, and from there people can get where they need to go.</p>
+        <h2 class="gap">How it grew</h2><ul class="grew"><li><strong>Oct 2024</strong>Office Deployment Tool settings and a one-line script</li><li><strong>Jun 2025</strong>A batch installer and its first EXE</li><li><strong>Mar 2026</strong>A graphical installer, then versions 1.0, 2.0 and 3.0 in one week</li><li><strong>Jul 2026</strong>Published on GitHub at 3.3</li><li><strong>Nov 2026</strong>3.3.15</li></ul>
+      </div>
+      <div>
+        <h2>What it does</h2><ul class="b"><li>Office LTSC 2024 or Microsoft 365 with a choice of update channel, plus optional Visio and Project.</li><li>Language selection, removal of an existing Office, and an offline LTSC package.</li><li>Updates itself after asking. You need a valid Office license.</li></ul>
+        <h2 class="gap">What carried into WinTool</h2><ul class="b"><li>The same choices: LTSC 2024, Microsoft 365, Visio, Project, all languages</li><li>The latest Office Deployment Tool, verified before use</li><li>Install, offline package and removal, also from the command line</li></ul><div class="box"><strong>Moving to WinTool?</strong><p>The Office page in WinTool does the same job, next to updates and upgrade.</p><a class="more" href="/apps/wintool/">Go to WinTool &#8594;</a></div>
+      </div>
+    </div>
+    <nav class="pager"><a class="more" href="/apps/winupdate-tool-v1/">&#8592; Newer: <bdi>WinUpdate Tool V1</bdi></a><span></span></nav>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> PcNinja, Javier Torres</span>
+      <ul>
+        <li><a href="https://help.pcninja.pro/en/">Remote support</a></li>
+        <li><a href="https://win11.pcninja.pro/">Windows ISOs</a></li>
+        <li><a href="https://office.pcninja.pro/">Office installer</a></li>
+        <li><a href="https://github.com/JavierTorresFelendler">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Keep version labels current: read each repo's latest release from GitHub.
+    // If GitHub can't be reached, the versions written above stay as they are.
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.ver[data-repo]').forEach(function (el) {
+        fetch('https://api.github.com/repos/JavierTorresFelendler/' + el.dataset.repo + '/releases/latest')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rel) { if (rel && rel.tag_name) el.textContent = rel.tag_name; })
+          .catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>

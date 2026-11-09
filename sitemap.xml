@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.pcninja.pro/</loc></url>
+  <url><loc>https://www.pcninja.pro/apps/wintool/</loc></url>
+  <url><loc>https://www.pcninja.pro/apps/windows-upgrade-tool/</loc></url>
+  <url><loc>https://www.pcninja.pro/apps/winupdate-tool-v2/</loc></url>
+  <url><loc>https://www.pcninja.pro/apps/winupdate-tool-v1/</loc></url>
+  <url><loc>https://www.pcninja.pro/apps/smart-office-installer/</loc></url>
   <url><loc>https://www.pcninja.pro/es/</loc></url>
+  <url><loc>https://www.pcninja.pro/es/apps/wintool/</loc></url>
+  <url><loc>https://www.pcninja.pro/es/apps/windows-upgrade-tool/</loc></url>
+  <url><loc>https://www.pcninja.pro/es/apps/winupdate-tool-v2/</loc></url>
+  <url><loc>https://www.pcninja.pro/es/apps/winupdate-tool-v1/</loc></url>
+  <url><loc>https://www.pcninja.pro/es/apps/smart-office-installer/</loc></url>
   <url><loc>https://www.pcninja.pro/he/</loc></url>
+  <url><loc>https://www.pcninja.pro/he/apps/wintool/</loc></url>
+  <url><loc>https://www.pcninja.pro/he/apps/windows-upgrade-tool/</loc></url>
+  <url><loc>https://www.pcninja.pro/he/apps/winupdate-tool-v2/</loc></url>
+  <url><loc>https://www.pcninja.pro/he/apps/winupdate-tool-v1/</loc></url>
+  <url><loc>https://www.pcninja.pro/he/apps/smart-office-installer/</loc></url>
 </urlset>

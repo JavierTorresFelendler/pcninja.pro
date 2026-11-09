@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WinUpdate Tool V1 | PcNinja</title>
+  <meta name="description" content="Where the Windows Update tools began: a tool for PCs that would not update on their own.">
+  <link rel="canonical" href="https://www.pcninja.pro/apps/winupdate-tool-v1/">
+  <link rel="alternate" hreflang="en" href="https://www.pcninja.pro/apps/winupdate-tool-v1/">
+  <link rel="alternate" hreflang="es" href="https://www.pcninja.pro/es/apps/winupdate-tool-v1/">
+  <link rel="alternate" hreflang="he" href="https://www.pcninja.pro/he/apps/winupdate-tool-v1/">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcninja.pro/apps/winupdate-tool-v1/">
+  <meta property="og:title" content="WinUpdate Tool V1 | PcNinja">
+  <meta property="og:description" content="Where the Windows Update tools began: a tool for PCs that would not update on their own.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pcninja.pro/apps/winupdate-tool-v1/">
+  <meta property="og:image" content="https://www.pcninja.pro/assets/logo-512.png">
+  <meta name="theme-color" content="#012456">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>(function(){var P={en:'/',es:'/es/',he:'/he/'},K='pcninja-lang',s=null,q=/[?&]lang=(en|es|he)\b/.exec(location.search);
+try{if(q){localStorage.setItem(K,q[1]);}s=localStorage.getItem(K);}catch(e){}
+if(q){history.replaceState(null,'',location.pathname+location.hash);return;}
+if(location.pathname!=='/')return;
+if(!s){var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var c=String(L[i]).slice(0,2).toLowerCase();if(c==='iw')c='he';if(P[c]){s=c;break;}}}
+if(s&&s!=='en'&&P[s])location.replace(P[s]+location.hash);})();</script>
+</head>
+<body>
+  <header class="console">
+    <div class="wrap bar">
+      <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="40" height="40">PcNinja</a>
+      <div class="menus">
+        <nav aria-label="Main">
+          <a href="/#tools">Tools</a>
+          <a href="/#services">Services</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <ul class="langs" aria-label="Language"><li><a href="/apps/winupdate-tool-v1/?lang=en" hreflang="en" lang="en" aria-current="true">EN</a></li><li><a href="/es/apps/winupdate-tool-v1/?lang=es" hreflang="es" lang="es">ES</a></li><li><a href="/he/apps/winupdate-tool-v1/?lang=he" hreflang="he" lang="he">עב</a></li></ul>
+      </div>
+    </div>
+
+
+    <div class="wrap toolhero">
+      <p class="crumb"><a href="/#tools">Tools</a> &#8250; <bdi>WinUpdate Tool V1</bdi></p>
+      <p class="prompt" aria-hidden="true" style="margin-top: 18px">PS C:\Users\Javier&gt; <span class="cmd">Get-Help WinUpdateTool -V1</span></p>
+      <h1><bdi>WinUpdate Tool V1</bdi> <span class="ver" data-repo="PcNinja-WinUpdateTool-V1">v1.1.2</span></h1>
+      <p class="lede">Where the Windows Update tools began: a tool for PCs that would not update on their own.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1/releases/latest">Download</a>
+        <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1">Source</a>
+        <a class="btn btn-quiet" href="https://github.com/JavierTorresFelendler/PcNinja-WinUpdateTool-V1/releases">Release notes</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap toolpage">
+    <p class="strip-h">Where it fits in the story</p>
+    <div class="strip"><a class="node" href="/apps/smart-office-installer/"><strong><bdi>Smart Office Installer</bdi></strong><span>Oct 2024</span></a><div class="arrow" aria-hidden="true">&#8594;</div><div class="node here" aria-current="page"><strong><bdi>WinUpdate Tool V1</bdi></strong><span>May 2025</span></div><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/apps/winupdate-tool-v2/"><strong><bdi>WinUpdate Tool V2</bdi></strong><span>Jul 2026</span></a><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/apps/windows-upgrade-tool/"><strong><bdi>Windows Upgrade Tool</bdi></strong><span>Oct 2026</span></a><div class="arrow" aria-hidden="true">&#8594;</div><a class="node" href="/apps/wintool/"><strong><bdi>WinTool</bdi></strong><span>Nov 2026</span></a></div>
+    <div class="cols">
+      <div>
+        <h2>Why I built it</h2><p>This one started on my own PC. Something broke, and I had neither the time nor the patience to reformat. Windows Update kept recommending a &#8220;reinstall&#8221; of Windows, and every attempt failed.</p><p>Maybe, then as now, Microsoft holds back upgrades on PCs older than 8th-generation Intel on purpose. I understand why: newer hardware has security features built in. But for people who just want their PC to work, it makes no sense, because those PCs work very well regardless.</p><p>So I set out to build a tool that behaves like a system I&#8217;ve managed for a long time at several workplaces: BigFix, where a managed agent does the work in large organizations. I wanted something like it for the personal world, the free world, as I like to call it. After all, that&#8217;s the world I grew up in and came up from.</p><p>And that&#8217;s what happened: I built a tool that worked around my problem.</p>
+        <h2 class="gap">How it grew</h2><ul class="grew"><li><strong>May 2025</strong>First build: one small EXE</li><li><strong>Jun 2026</strong>1.1.2: MSI, portable EXE and command line</li><li><strong>Jul 2026</strong>Published on GitHub; V2 takes over</li></ul>
+      </div>
+      <div>
+        <h2>What it does</h2><ul class="b"><li>A window to check and run Windows Update, schedule runs, read logs and audit drivers.</li><li>Command-line modes for status, updates, driver audit, log collection and resetting Windows Update.</li><li>MSI with silent deployment, or a portable EXE.</li></ul>
+        <h2 class="gap">What carried into WinTool</h2><ul class="b"><li>V1 grew into V2, and WinTool carries the V2 engine</li><li>Scheduled update runs</li><li>Driver audit and silent deployment</li></ul><div class="box"><strong>Moving to WinTool?</strong><p>WinTool finds V1, offers to import its schedule and removes it.</p><a class="more" href="/apps/wintool/">Go to WinTool &#8594;</a></div>
+      </div>
+    </div>
+    <nav class="pager"><a class="more" href="/apps/winupdate-tool-v2/">&#8592; Newer: <bdi>WinUpdate Tool V2</bdi></a><a class="more" href="/apps/smart-office-installer/">Older: <bdi>Smart Office Installer</bdi> &#8594;</a></nav>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> PcNinja, Javier Torres</span>
+      <ul>
+        <li><a href="https://help.pcninja.pro/en/">Remote support</a></li>
+        <li><a href="https://win11.pcninja.pro/">Windows ISOs</a></li>
+        <li><a href="https://office.pcninja.pro/">Office installer</a></li>
+        <li><a href="https://github.com/JavierTorresFelendler">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Keep version labels current: read each repo's latest release from GitHub.
+    // If GitHub can't be reached, the versions written above stay as they are.
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelectorAll('.ver[data-repo]').forEach(function (el) {
+        fetch('https://api.github.com/repos/JavierTorresFelendler/' + el.dataset.repo + '/releases/latest')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (rel) { if (rel && rel.tag_name) el.textContent = rel.tag_name; })
+          .catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>
