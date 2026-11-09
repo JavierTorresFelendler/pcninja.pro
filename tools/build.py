@@ -51,7 +51,6 @@ SLUG = {"wintool": "wintool", "upgrade": "windows-upgrade-tool", "v2": "winupdat
 REPO = {"wintool": "WinTool-by-PcNinja", "upgrade": "Win-Upgrade-Tool-by-PcNinja", "v2": "PcNinja-WinUpdateTool-V2",
         "v1": "PcNinja-WinUpdateTool-V1", "office": "pcninja-smart-office-installer"}
 DL = {k: GH + r + "/releases/latest" for k, r in REPO.items()}
-DL["office"] = "https://office.pcninja.pro/"
 
 def tool_path(code, key):
     return PATHS[code] + "apps/" + SLUG[key] + "/"

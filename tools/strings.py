@@ -14,7 +14,7 @@ EN = {
  "svc_intro": "Most of this runs on a not-for-profit basis. Tell me what's going on and I'll take it from there.",
  "svc1": "Remote support", "svc1_t": "Download a remote-assistance app and I'll connect to your PC to fix it with you.",
  "svc2": "Clean Windows ISOs", "svc2_t": "Windows 11 and 10 Pro install images, with or without the essentials preinstalled.",
- "svc3": "Office in one click", "svc3_t": "The Smart Office Installer, straight from its latest release.",
+ "svc3": "WinTool in one click", "svc3_t": "Downloads the latest WinTool directly: Windows Update, Windows Upgrade and Office in one app.",
  "alt": "Javier's desk: a hand on the mouse and a tabby cat asleep on his arm",
  "cap": "The office. Quality control is asleep on my arm.",
  "about_h2": "About me",
@@ -26,7 +26,7 @@ EN = {
  "ct_h2": "Get in touch",
  "ct_intro": "For a support request, fill in the short service form. For anything about the tools, open an issue on GitHub.",
  "ct_form": "Open the service form", "ct_gh": "GitHub profile",
- "f_help": "Remote support", "f_iso": "Windows ISOs", "f_office": "Office installer",
+ "f_help": "Remote support", "f_iso": "Windows ISOs", "f_office": "WinTool",
 }
 ES = {
  "title": "PcNinja - Javier Torres",
@@ -43,7 +43,7 @@ ES = {
  "svc_intro": "Casi todo esto funciona sin ánimo de lucro. Cuéntame qué pasa y yo me encargo.",
  "svc1": "Soporte remoto", "svc1_t": "Descarga una app de asistencia remota y me conecto a tu PC para arreglarlo contigo.",
  "svc2": "ISOs limpias de Windows", "svc2_t": "Imágenes de instalación de Windows 11 y 10 Pro, con o sin los programas básicos preinstalados.",
- "svc3": "Office en un clic", "svc3_t": "El Smart Office Installer, directo desde su última versión.",
+ "svc3": "WinTool en un clic", "svc3_t": "Descarga directa de la última versión de WinTool: Windows Update, la actualización de Windows y Office en una sola app.",
  "alt": "El escritorio de Javier: una mano en el ratón y un gato atigrado dormido sobre su brazo",
  "cap": "La oficina. Control de calidad duerme sobre mi brazo.",
  "about_h2": "Sobre mí",
@@ -55,7 +55,7 @@ ES = {
  "ct_h2": "Contacto",
  "ct_intro": "Para una solicitud de soporte, rellena el breve formulario de servicio. Para cualquier cosa sobre las herramientas, abre un issue en GitHub.",
  "ct_form": "Abrir el formulario", "ct_gh": "Perfil de GitHub",
- "f_help": "Soporte remoto", "f_iso": "ISOs de Windows", "f_office": "Instalador de Office",
+ "f_help": "Soporte remoto", "f_iso": "ISOs de Windows", "f_office": "WinTool",
 }
 HE = {
  "title": "PcNinja - Javier Torres",
@@ -72,7 +72,7 @@ HE = {
  "svc_intro": "רוב הפעילות כאן היא ללא מטרות רווח. ספרו לי מה קורה ואני אמשיך משם.",
  "svc1": "תמיכה מרחוק", "svc1_t": "מורידים אפליקציה לעזרה מרחוק, ואני מתחבר למחשב ומתקן אותו יחד איתכם.",
  "svc2": "קבצי ISO נקיים של Windows", "svc2_t": "קבצי התקנה של Windows 11 ו-10 Pro, עם או בלי התוכנות הבסיסיות מותקנות מראש.",
- "svc3": "Office בלחיצה אחת", "svc3_t": "ה-Smart Office Installer, ישר מהגרסה האחרונה שלו.",
+ "svc3": "WinTool בלחיצה אחת", "svc3_t": "הורדה ישירה של הגרסה האחרונה של WinTool: Windows Update, שדרוג Windows ו-Office באפליקציה אחת.",
  "alt": "השולחן של Javier: יד על העכבר וחתול טאבי ישן על הזרוע",
  "cap": "המשרד. מחלקת בקרת האיכות ישנה לי על היד.",
  "about_h2": "קצת עליי",
@@ -84,5 +84,5 @@ HE = {
  "ct_h2": "יצירת קשר",
  "ct_intro": "לבקשת תמיכה, מלאו את טופס השירות הקצר. לכל דבר שקשור לכלים, פתחו issue ב-GitHub.",
  "ct_form": "לטופס השירות", "ct_gh": "פרופיל GitHub",
- "f_help": "תמיכה מרחוק", "f_iso": "קבצי ISO של Windows", "f_office": "מתקין Office",
+ "f_help": "תמיכה מרחוק", "f_iso": "קבצי ISO של Windows", "f_office": "WinTool",
 }
